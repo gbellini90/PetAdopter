@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+ before_action :requires_login, only: [:index, :show]
 
   def index
     @users = User.all
@@ -10,14 +11,40 @@ class Api::V1::UsersController < ApplicationController
     render json: @user, status: :ok
   end
 
+  def profile
+   render json: { user: User.new(current_user) }, status: :accepted
+  end
+
+#   def create
+#   @user = User.create(user_params)
+#   if @user.valid?
+#     @token = encode_token(user_id: @user.id)
+#     render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
+#   else
+#     render json: { error: 'failed to create user' }, status: :not_acceptable
+#   end
+# end
+
   def create
     @user = User.create(user_params)
     if @user.valid?
-      render json: @user, status: :ok
+      @token = get_token(payload(@user.username, @user.id))
+      render json: {
+        username: @user.username,
+        name:@user.name,
+        pets:@user.pets,
+        matches:@user.matches,
+        pet_id: @user.pet_id,
+        id: @user.id,
+        token: get_token(payload(@user.username, @user.id))
+      }, status: :created
     else
-      render json: @user.errors.full_messages, status: :unprocessable_entity
+      render json: {
+        errors: @user.errors.full_messages
+      }, status: :unprocessable_entity
     end
   end
+
 
   def update
     @user = User.find(params[:id])
@@ -31,7 +58,7 @@ class Api::V1::UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :adopted_pets)
+      params.require(:user).permit(:name, :username, :pet_id, :password)
     end
 
 end

@@ -1,4 +1,5 @@
 class Api::V1::PetsController < ApplicationController
+before_action :requires_login, only: [:show, :index]
 
   def index
     @pets = Pet.all
@@ -11,11 +12,11 @@ class Api::V1::PetsController < ApplicationController
   end
 
   def create
-    @pet = Party.create(pet_params)
+    @pet = Pet.create(pet_params)
     if @pet.valid?
       render json: @pet, status: :ok
     else
-      render json: @pet.erros.full_messages, status: :unprocessable_entity
+      render json: @pet.errors.full_messages, status: :unprocessable_entity
   end
 end
 
