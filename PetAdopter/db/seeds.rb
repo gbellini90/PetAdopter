@@ -65,6 +65,6 @@ end
 
 
 
-User.create!(name: "Gabby", email: "gbellini90@gmail.com" )
-User.create(name: "Hamilton", email: "hambam@email.com")
-User.create(name:"HamGab", email:"hamgab@gmail.com")
+User.create!(name: "Gabby", username: "gbellini90@gmail.com", password:"hi" )
+User.create(name: "Hamilton", username: "hambam@email.com",password:"hi")
+User.create(name:"HamGab", username:"hamgab@gmail.com",password:"hi")
