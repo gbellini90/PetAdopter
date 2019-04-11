@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Pet Adopter is an app to view, save and adopt animals from local NYC shelters and adoption centers. Users can sign up and sign back in to view all available pets, with photos and details, and add pets to their “pet list”. When a user visits their pet list, they have the option to adopt any pets that they have added. If a user has a pet saved in their list and someone else adopts it, a user can obviously no longer adopt, but can remove that pet from their list, either from the main page or from their profile. Once a pet is adopted, there is no un-adopting — you are committing to save that animal! :clap::skin-tone-3:
+Pet Adopter is an app to view, save and adopt animals from local NYC shelters and adoption centers. Users can sign up and sign back in to view all available pets, with photos and details, and add pets to their “pet list”. When a user visits their pet list, they have the option to adopt any pets that they have added. If a user has a pet saved in their list and someone else adopts it, a user can obviously no longer adopt, but can remove that pet from their list, either from the main page or from their profile. Once a pet is adopted, there is no un-adopting — you are committing to save that animal! 👏
 
 ## Technologies Used
 
@@ -42,7 +42,7 @@ to create a list of adoptable pets. If the development database is running corre
 
 `rails s`
 
-and once the terminal says it’s running, navigate to http://localhost:3000. If there’s  “Yay! You’re on Rails!” welcome page, then you can go to http://localhost:3000/api/v1/pets to check that all the data is being rendered properly. If so, it’s time for the frontend (link below). :call_me_hand::skin-tone-3:
+and once the terminal says it’s running, navigate to http://localhost:3000. If there’s  “Yay! You’re on Rails!” welcome page, then you can go to http://localhost:3000/api/v1/pets to check that all the data is being rendered properly. If so, it’s time for the frontend (link below). 🤙
 
 ## Frontend Link
 
