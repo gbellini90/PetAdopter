@@ -50,7 +50,7 @@ and once the terminal says it’s running, navigate to http://localhost:3000. If
 
 ## Demo Video
 
-[PetAdopter.mov](https://drive.google.com/open?id=1D7FHcEtkCZXcCac5FGkyiHY7tLE1dS-v)
+[PetAdopter](https://www.youtube.com/watch?v=sEnUhJbAchc&feature=youtu.be)
 
 ## Authors
 
