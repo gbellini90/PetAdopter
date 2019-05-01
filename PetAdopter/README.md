@@ -11,7 +11,7 @@ React, Ruby on Rails (Rails API backend), Petfinder API, HTML, CSS, JSON, Semant
 ## Getting Started
 
 ### Prerequisites
-To use, clone down this repo and open with your preferred text editor. This project uses Ruby on Rails, so you’ll need to make sure you have both installed (if you don’t, visit this link for instructions: Digital Ocean: Install Ruby and Set Up Local Environment) as well as PostgreSQL as the database resource.
+To use, clone down this repo and open with your preferred text editor. This project uses Ruby on Rails, so you’ll need to make sure you have both installed as well as PostgreSQL as the database resource.
 
 Because the backend pulls data from the PetFinder API, you will also need to obtain an API key. Head to https://www.petfinder.com//developers/api-key to login or signup with account credentials and from there you’ll be able to request an API Key. It shouldn’t take long to receive an email containing your key, a few hours tops so keep an eye out.
 
